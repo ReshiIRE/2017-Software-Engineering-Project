@@ -6,4 +6,7 @@ I'm still new to Git and Github so this will be a work in progress.
 
 Merge this shit.
 
-THIS IS NOT A VIRUS, IM A DOLPHIN, DOLPHINS CAN BE TRUSTED!
+ACHTUNG!! ACHTUNG!!
+THIS IS NOT A VIRUS
+THIS IS A FRIENDLY DOLPHIN
+DOLPHINS CAN BE TRUSTED!
