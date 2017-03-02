@@ -1,0 +1,46 @@
+<head>
+ <style type="text/css"> 
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+body {
+        font-family: Trebuchet MS;
+      }
+
+header{
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+    height: 100px;
+}
+ 
+footer {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+    height: 30px;
+}
+
+social {
+    float: left;
+    width: 120px;
+    margin: 0;
+    padding: 1em;
+}
+
+
+
+article {
+    margin-left: 170px;
+    height: 61.3%;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+</style>
+</head>
