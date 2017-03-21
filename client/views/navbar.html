@@ -1,0 +1,35 @@
+<template name="navbar">
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+					<a class="navbar-brand">School Website</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav">
+					<li><a href='/'>Home </a></li>
+					<li><a href='contactUs'>Contact Us </a></li>
+					<li><a href='findUs'>Find Us</a></li>
+					<li><a href='aboutUs'>About Us</a></li>
+					<li><a href='Registration'>Register Now</a></li>
+					<li><a href='comments'>Comments</a></li>
+					<li><button type = "button" class = "toggle" data-toggle="collapse" data-target="#myCollapse">
+						<span class="icon-bar"></span>
+						</button>
+					<div class="collapse" id="myCollapse">
+						{{#if currentUser}}
+							{{> dashboard}}
+						{{else}}
+							{{> login}}
+						{{/if}}
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</template>
