@@ -1,0 +1,24 @@
+<head>
+  <title>School Website</title>
+  <link rel="stylesheet" type="text/css" href='main.css' />
+</head>
+
+<template name="main">
+	{{>yield "navigation"}}
+	{{>yield "top"}}
+</template>
+
+<template name = "home">
+	<div class ="container">
+		<div class="row">
+			<p class="text center">Jumbotron</p>
+		</div>
+	</div>
+	<article>
+	<p>Quick Sytlesheet test</p>
+	</article>
+</template>
+
+<template name = "dashboard">
+	<p><a href="#" class="logout">Logout</a></p>
+</template>
