@@ -1,2 +1,3 @@
 Comments = new Mongo.Collection('Comments');
-console.log(Comments.find().count());
+
+console.log("Comments count: " + Comments.find().count());

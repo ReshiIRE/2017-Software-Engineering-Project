@@ -1,28 +1,30 @@
 <template name="comments">
-	<div class="well col-xs-6 col-xs-offset-3">
-		<div class="row col-xs-10 col-xs-offset-1">
-			<form class="form-horizontal" role="form" id="postComment">
+	{{#if currentUser}}
+	<div class="row col-sm-8 col-sm-offset-2">
+		<div class = "well well col-xs-8 col-xs-offset-3">
+			<form class="form" role="form" id="postComment">
 				<div class="row">
 					<div class="form-group">
-						<div class="col-xs-12" id="well-post">
-							<textarea class="form-control required" rows="3" id="inputPost"
+						<div class="col-xs-9" id="well-post">
+							<textarea class="form-control required" rows="1" id="inputComment"
 							placeholder="Got something to say?" maxlength="140"></textarea>
 							<label id="charRemaining" for="inputPost">{{charRemaining}}</label>
 						</div>
 					</div>
 				</div>
 				<div class="form-group">
-					<div class="col-xs-3">
-						<button type="submit" class="btn btn-primary">Post</button>
+					<div class="row row col-sm-8">
+						<input type="submit" class="btn btn-primary" value="Comment">
 					</div>
 				</div>
 			</form>
 		</div>
 	</div>
+	{{/if}}
 	<div class="row col-sm-8 col-sm-offset-2 textPost">
 		<div class="row">
 		{{#each Comments}}
-			<div class="well">
+			<div class="well well col-xs-8 col-xs-offset-3">
 				<div class="row">
 					<div class="col-sm-2 pull-left">
 						{{>avatar userId=createdBy shape="rounded"}}
@@ -32,14 +34,22 @@
 					</div>
 				</div>
 				<div class="row spacer">
-					<div class="col-sm-2">
-						<input class="form-control hidden" type="text" id="edit{{_id}}" value={{comment}}>
-							<div id="comment{{_id}}">
-								{{comment}}
-							</div>
+					<div class="col-sm-7">
+						<textarea class="form-control hidden" type="text" id="edit{{_id}}" value={{comment}}></textarea>
+						<div id="comment{{_id}}">
+							{{comment}}
+						</div>
 					</div>
 				</div>
-			</div>
+				<div class="row spacer">
+					{{#if userCreated (createdBy)}}
+						<div class="col-xs-3">
+							<input type="checkbox" id="plsWork">
+							<label for="edit{{this._id}}"></label>
+						</div>
+					{{/if}}
+				</div>
+			</div>	
 		{{/each}}
 		</div>
 	</div>

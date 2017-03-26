@@ -4,6 +4,12 @@ Router.configure(
 	layoutTemplate: 'Registration'
 });
 
+Router.route('/User:_id',
+{
+	name: 'UserPage',
+	controller: 'UserPageController'
+});
+
 Router.route('/', function(){
 	this.render('navbar', {to: "navigation"});
 	this.render('home', {to: "top"});
@@ -31,13 +37,13 @@ Router.route('/contactUs', function(){
 	name:"contactUs"
 }
 );
-Router.route('/findUs', function(){
+Router.route('/camp', function(){
 	this.render('navbar', {to: "navigation"});
-	this.render('findUs', {to: "top"});
+	this.render('camp', {to: "top"});
 	this.layout('main');
 },
 {
-	name:"findUs"
+	name:"camp"
 }
 );
 Router.route('/registration', function(){
@@ -49,11 +55,18 @@ Router.route('/registration', function(){
 {
 	name:"Registration"
 });
-Router.route('/comments', function(){
-	this.render('navbar', {to: "navigation"});
-	this.render('comments', {to: "top"});
-	this.layout('main');
-},
+Router.route('/new', {
+	name: 'newBlog',
+	controller: 'BaseController'
+});
+
+Router.route('/blog', {
+	name: 'Blog',
+	controller: 'MainBlogController'
+})
+
+Router.route('/:_id',
 {
-	name:"comments"
+	name: 'singleBlog',
+	controller: 'SingleBlogController'
 });

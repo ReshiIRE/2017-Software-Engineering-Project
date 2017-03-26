@@ -1,0 +1,32 @@
+<template name="blog">
+	{{> navbar}}
+	{{> yield}}
+</template>
+
+<template name="newBlog">
+	<h1> Make a New Blog Entry </h1>
+	{{> quickForm collection="Blogs" id="submitBlogForm" type="method" meteormethod="submitBlog"}}
+</template>
+
+<template name="blogList">
+	{{#each blogs}}
+		<hr>
+			{{> blogItem}}
+		<hr>
+	{{/each}}
+</template>
+
+<template name = "blogItem">
+	<h3>
+		{{#linkTo route='singleBlog'}}
+			{{title}}
+		{{/linkTo}}
+	</h3>
+</template>
+
+<template name = "blogPage">
+	<h2>{{title}}</h2>
+	<p>{{text}}</p>
+	<p>by {{author}}</p>
+	{{> comments}}
+</template>
