@@ -1,12 +1,3 @@
 # 2017-Software-Engineering-Project
 
-This is the default readme we really don't need but eh, whatever.
-
-I'm still new to Git and Github so this will be a work in progress.
-
-Merge this shit.
-
-ACHTUNG!! ACHTUNG!!
-THIS IS NOT A VIRUS
-THIS IS A FRIENDLY DOLPHIN
-DOLPHINS CAN BE TRUSTED!
+Project by Eamonn Hannon, Grzegorz Bałuszek, Kevin Faherty, Deirdre Ní Choncubhair, 2017.
