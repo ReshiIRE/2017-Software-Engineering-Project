@@ -66,3 +66,18 @@ article {
 	padding-left: 3em;
 	padding-right: 3em;
 }
+
+.editBox label:before
+{
+    content: "\f040";
+    font-family: FontAwesome;
+    color:#349db;
+    cursor: pointer; cursor: hand;
+}
+
+.editBox input[type=checkbox]: checked + label:before
+{
+    content: "Save";
+    color:#333;
+    cursor:pointer; cursor:hand;
+}

@@ -1,3 +1,3 @@
 Users = new Mongo.Collection('Users');
 
-console.log(Users.find().count());
+console.log("Number of users: " + Users.find().count());
