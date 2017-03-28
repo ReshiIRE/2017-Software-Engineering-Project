@@ -4,11 +4,7 @@
 </template>
 
 <template name="singleUserPage">
-{{#if currentUser}}
 	<h2>Your email address: {{currentUser.emails.[0].address}}</h2>
 	<br>
 	<p>Your school: {{currentUser.profile.school}}</p>
-{{else}}
-	<p>You are not logged in. Please log in to view your details</p>
-{{/if}}
 </template>

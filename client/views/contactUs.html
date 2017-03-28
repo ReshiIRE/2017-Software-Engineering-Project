@@ -1,11 +1,38 @@
 <template name="contactUs">
-	<div class ="container">
-		<div class="jumbotron center">
-			<h2 id="center">Project by a Team has No Name for Software Engineering</h2>
-			<p id="center">Contact us.</p>
-		</div>
-	</div>
-	<h1 id="center">Temp Homepage for Software Engineering Project </h1>
-	 <p>Insert information on how to contact us here.</p>
+	 <h4>NUIG SCIENCE SUMMER SCHOOL</h4>
+	 <br>
+	 <p>Arts/Science Building, <br> NUI Galway, <br> University Road, <br> Galway</p>
+	 <br>
+	 <p>Tel: 353 (0)91 524411</p>
+	 <br>
+	 <p>Email: e.hannon11@nuigalway.ie</p>
+	 <br>
+	 <p>Facebook: </p>
+	 <br>
+	 <p>Twitter: </p>
+	 <br>
+	 <iframe width="580" height="400" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAM8F45YdG8XaVKY5tJX8crfvhSplJBYPI&q=National+University+of+Ireland,+University+Road,+Galway" allowfullscreen></iframe>
+	 <br>
+	 <img src="images/mapOfCampus.jpg">
+	 <p><b>Please feel free to contact us using the form below:</b></p>
+	 <br>
+	 {{#if currentUser}}
+
+	 {{else}}
+	 <form class="form" role="form" id="postEmail">
+		 <p>Your Email (required)</p>
+		 <input type="email" name="registerEmail">
+		 <br>
+		 <br>
+		 <p>Your Name (required)</p>
+		 <input name="nameMaile">
+		 <br>
+		 <br>
+		 <p>Your Message</p>
+		 <textarea class="form control required" rows="1" id="emailText"
+		 placeholder="Enter your message..."></textarea>
+		 <input type="submit" class="btn btn-primary" value="Send">
+	</form>
+	 {{/if}}
  </template>
  

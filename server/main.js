@@ -1,14 +1,15 @@
 import { Meteor } from 'meteor/meteor';
 import { Email } from 'meteor/email';
 
-Meteor.startup(() => {
-  // code to run on server at startup
+Meteor.startup(function (){
+  process.env.MAIL_URL = "smtp://mailrelay-dmz.it.nuigalway.ie";
 });
 
 Accounts.onCreateUser(function(options, user)
 {
 		if(user.profile == undefined) user.profile = {};
-		_.extend(user.profile, { school: options.school});
+		_.extend(user.profile, { school: options.school, student: options.student, 
+			phone: options.phone, needs: options.needs, permission: options.permission});
 		
 		return user;
 });
@@ -35,8 +36,21 @@ Meteor.methods(
 	'updateComment' : function(commentObj)
 	{
 		Comments.update({_id:commentObj.id}, {$set: {comment: commentObj.comment}});
-	}
+	},
+
+	'sendEmail': function (to, from, subject, text) {
+		console.log("Email called: " + to);
+    	check([to, from, subject, text], [String]);
+    	this.unblock();
+    	Email.send({
+      		to: to,
+      		from: from,
+      		subject: subject,
+      		text: text
+    	});
+  	}
 });
+
 Meteor.publish('userPosts', function(){
 	return Comments.find();
 });
@@ -54,5 +68,5 @@ Meteor.publish('singleBlog', function(id)
 Meteor.publish('singleUser', function(id)
 {
 	//console.log("Server side: " + Users.find(id))
-	return Users.find(id);
+	return Meteor.users.find(id);
 });
