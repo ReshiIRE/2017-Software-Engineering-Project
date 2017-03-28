@@ -1,3 +1,1 @@
-Users = new Mongo.Collection('Users');
-
-console.log("Number of users: " + Users.find().count());
+console.log("Number of users: " + Meteor.users.find().count());

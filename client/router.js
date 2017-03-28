@@ -19,6 +19,14 @@ Router.route('/', function(){
 	name:"home"
 }
 );
+Router.route('/registerNow', function(){
+	this.render('navbar', {to: "navigation"});
+	this.render('registerNow', {to: "top"});
+	this.layout('main');
+},
+{
+	name:"registerNow"
+});
 Router.route('/aboutUs', function(){
 	this.render('navbar', {to: "navigation"});
 	this.render('aboutUs', {to: "top"});
@@ -28,6 +36,16 @@ Router.route('/aboutUs', function(){
 	name:"aboutUs"
 }
 );
+Router.route('/registerCustomService', function()
+{
+	this.render('navbar', {to: "regNav"});
+	this.render('registerCustomService', {to: "regAdd"});
+	this.layout('Registration');
+
+},
+{
+	name:"registerCustomService"
+});
 Router.route('/contactUs', function(){
 	this.render('navbar', {to: "navigation"});
 	this.render('contactUs', {to: "top"});
@@ -48,7 +66,6 @@ Router.route('/camp', function(){
 );
 Router.route('/registration', function(){
 	this.render('navbar', {to: "regNav"});
-	this.render('data', {to: "regTop"});
 	this.render('register', {to: "regAdd"});
 	this.layout('Registration');
 },

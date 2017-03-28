@@ -1,4 +1,23 @@
 <template name="navbar">
+<style>
+	.details {
+	padding-top: 5px;
+	padding-bottom:5px; 
+	
+	}	
+		
+	nav {
+	width: 100%;
+	}
+	.navbar-brand {
+	padding-right: 50px !important;
+	}	
+	
+	li {
+	padding: 2px 10px;
+	}
+	
+</style>
 	<nav class="navbar navbar-inverse">
 		<div class="container-fluid">
 			<div class="navbar-header">
@@ -13,21 +32,22 @@
 				<ul class="nav navbar-nav">
 					<li><a href='/'>Home </a></li>
 					<li><a href='aboutUs'>About Us</a></li>
+					<li><a href='camp'>Camp Details</a></li>
 					<li><a href='contactUs'>Contact Us</a></li>
-					<li>Camp Details</li>
-					{{#unless currentUser}}<li><a href='Registration'>Register Now</a></li>{{/unless}}
-					<li>{{#linkTo route='Blog'}}Blog{{/linkTo}}</li>
-					<li><a href='camp'>Camp Details</a></li>					
-					<li><button type = "button" class = "toggle" data-toggle="collapse" data-target="#myCollapse">
+					<li><a href='registerNow'>Register Now</a></li>
+					<!--{{#unless currentUser}}<li><a href='Registration'>Registation</a></li>{{/unless}}-->
+					<li>{{#linkTo route='Blog'}}Blog{{/linkTo}}</li>		
+					<li><!--<button type = "button" class = "toggle" data-toggle="collapse" data-target="#myCollapse">
 						<span class="icon-bar"></span>
 						</button>
-					<div class="collapse" id="myCollapse">
+					<div class="collapse" id="myCollapse">-->
 						{{#if currentUser}}
 							{{> dashboard}}
 						{{else}}
 							{{> login}}
+							<!--{{> loginButtons}}-->
 						{{/if}}
-						</div>
+					<!--	</div>-->
 					</li>
 				</ul>
 			</div>
