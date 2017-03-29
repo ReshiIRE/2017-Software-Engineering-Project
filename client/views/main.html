@@ -1,0 +1,64 @@
+<head>
+
+  <title>School Website</title>
+  <!--  <style>
+	.container {
+	text-align: center;
+	padding: 5px;
+	margin-bottom: 20px !important;
+	}
+	
+	.jumbotron-center {
+	vertical-align: middle;
+	margin-top: 20px !important;
+	}
+	
+	.love-science {
+	position: absolute;
+	left: 45%;
+	padding-bottom: 15px;
+	}
+	
+	.science-symbol {
+	position: absolute;
+	left: 55%;
+	padding-bottom: 15px;
+	}
+			
+	h3 .register {
+	position:absolute;
+	left:50%;
+	padding-top: 5px;
+	}
+  </style>-->
+  <!--<link rel="stylesheet" type="text/css" href='main.css' />-->
+</head>
+
+<template name="main">
+	{{>yield "navigation"}}
+		<div class ="container">
+		<div class="jumbotron center">
+			<h2 id="center"> Science Summer School 2017 </h2><img height="62" width="200" src="images/NUIGalway.png">
+		</div>
+	</div>
+	{{>yield "top"}}
+</template>
+
+<template name = "home">
+	
+	<p>NUI Galway Science Summer School was established in 2014 for primary school going children - aged between 4 and 12 years old - to promote the love of Science through fun and educational activities.</p>
+	<img src="/images/LoveScience.png"><img src="/images/scienceSymbol.png">
+	<br>
+	<p>This Summer Camp has grown enormously over the past 3 years and we are pleased to announce that we are once again offering a 5 Day Science Summer School during the months of June and July 2017. Our programmes have been expanded and updated to cater for the needs of all our participants and to ensure that each child is fully catered for during our summer school. Children with special needs are welcomed but must be accompanied by a suitably qualified Special Needs Assistant.</p>
+	<br>
+	<p>Our Science Summer School is not only great value for money but it offers a week of fun, learning and excitement in a safe, secure and happy environment.</p>
+
+	<h3>To register - just click on "register now" button</h3>
+	<a href="Registration"><img src="/images/registernow.jpg"></a>
+</template>
+
+<template name = "dashboard">
+	<p>{{#linkTo route='newBlog'}}Add new post{{/linkTo}}</p>
+	<p><a href="UserPage">{{currentUser.emails.[0].address}}</a></p>
+	<p><a href="#" class="logout">Logout</a></p>
+</template>

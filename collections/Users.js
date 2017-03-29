@@ -1,0 +1,1 @@
+console.log("Number of users: " + Meteor.users.find().count());

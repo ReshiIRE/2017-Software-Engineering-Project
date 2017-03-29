@@ -1,0 +1,179 @@
+<template name = "Registration">
+	{{> yield "regNav"}}
+	{{> yield "regAdd"}}
+</template>
+
+<template style="width:30%" name = "registerNow">
+	<p><b>NUI Galway Science Summer Camp</b></p>
+	<p>5-Day Camp will run from 09:30 to 15:00 each day</p>
+	<br>
+	<p>5-Day Camps are running on the following dates:</p>
+	<br>
+	<table border = "1" style="width:100%">
+		<tr>
+			<th>WEEK 1</th>
+			<td>12th June to 16th June, 2017</td>
+		</tr>
+		<tr>
+			<th>WEEK 2</th>
+			<td>19th June to 23rd June, 2017</td>
+		</tr>
+		<tr>
+			<th>WEEK 3</th>
+			<td>26th June to 30th June, 2017</td>
+		</tr>
+		<tr>
+			<th>WEEK 4</th>
+			<td>3rd July to 7th July, 2017</td>
+		</tr>
+		<tr>
+			<th>WEEK 5</th>
+			<td>10th July to 14th July, 2017</td>
+		</tr>
+		<tr>
+			<th>WEEK 6</th>
+			<td>17th July to 21st July, 2017</td>
+		</tr>
+	</table>
+	<br>
+	<br>
+	<p><b>Cost of 5-Day Camp:</b></p>
+	<br>
+	<p><b>1st Child - €95</b></p>
+	<br>
+	<p><b>2nd Child - €80</b></p>
+	<br>
+	<p><b>3rd Child - €65</b></p>
+	<br>
+	<p>Please specify any special requirements your child may have - dietary, or otherwise - when completing the Registration Form.</p>
+	<br>
+	<p>Please state whether you are granting permission to have your child photographed and/or video-taped during the Science Summer School</p>
+	<br>
+	<a href="Registration"><img src="/images/registernow.jpg"></a>
+</template>
+
+<template name="login">
+	<form class="form-horizontal">
+	<div class="row">
+		<div class="form-group">
+			<div class="col-sm-1">
+				<p>Email</p>
+				<input type="email" name="loginEmail">
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-2">
+				<p>Password</p>
+				<input type="password" name="loginPassword">
+			</div>
+		</div>
+	</div>
+	<input type="submit" value="Login">
+	</form>
+	<div class="row">
+	</div>
+	<div class="row">
+		<div>
+			<p>Or</p>
+		</div>
+		<a id="loginFacebook" class="btn btn-default btn-lg btn-login facebook" href="#">
+        	<i class="fa fa-facebook fa-fw"></i> Sign in with Facebook
+   	 	</a>
+    </div>
+    <div class="row">
+		<a id="loginGoogle" class="btn btn-default btn-lg btn-login google" href="#">
+        	<i class="fa fa-google-plus fa-fw"></i> Sign in with Google
+   	 	</a>
+    </div>
+      <div class="row">
+		<a id="loginTwitter" class="btn btn-default btn-lg btn-login twitter" href="#">
+        	<i class="fa fa-twitter fa-fw"></i> Sign in with Twitter
+   	 	</a>
+    </div>
+</template>
+
+<template name="register">
+	<h3>Register Form</h3>
+	<form id="pad" class="form-horizontal" role="form">
+		<div class="form-group">
+		<div class="col-sm-1">
+			<p>Email</p>
+			<input type="email" placeholder="Email" name="registerEmail">
+		</div>
+		</div>
+		<div class="form-group">
+		<div class="col-sm-2">
+			<p>Password</p>
+			<input type="password" placeholder="Password" name="registerPassword">
+		</div>
+		</div>
+		<div class="form-group">
+		<div class="col-sm-3">
+			<p>Name of Student</p>
+			<input type="text" placeholder="Name of Student" name="registerStudent">
+		</div>
+		</div>
+		<div class="form-group">
+		<div class="col-sm-3">
+			<p>School</p>
+			<input type="text" placeholder="Name of school" name="registerSchool">
+		</div>
+		</div>
+		<div class="form-group">
+		<div class="col-sm-3">
+			<p>Phone Number</p>
+			<input type="text" placeholder="Phone Number" name="registerPhoneNumber">
+		</div>
+		</div>
+		<div class="form-group">
+		<div class="col-sm-3">
+			<p>Dietary / Special Needs</p>
+			<input type="text" placeholder="Dietary / Special Needs" name="registerNeeds">
+		</div>
+		</div>
+		<div class="form-group">
+		<div class="col-sm-3">
+			<p>Permission to Photograph Child (Yes / No)</p>
+			<input type="text" placeholder="Permission" name="registerPermission">
+		</div>
+		</div>
+		<input type="submit" value="Register">
+	</form>
+</template>
+
+<template name="registerCustomService">
+	<h3>Registration Form - to extend your profile</h3>
+	<form id="pad" class="form-horizontal" role="form">
+		<div class="form-group">
+		<div class="col-sm-3">
+			<p>Name of Student</p>
+			<input type="text" placeholder="Name of Student" name="registerStudent">
+		</div>
+		</div>
+		<div class="form-group">
+		<div class="col-sm-3">
+			<p>School</p>
+			<input type="text" placeholder="Name of school" name="registerSchool">
+		</div>
+		</div>
+		<div class="form-group">
+		<div class="col-sm-3">
+			<p>Phone Number</p>
+			<input type="text" placeholder="Phone Number" name="registerPhoneNumber">
+		</div>
+		</div>
+		<div class="form-group">
+		<div class="col-sm-3">
+			<p>Dietary / Special Needs</p>
+			<input type="text" placeholder="Dietary / Special Needs" name="registerNeeds">
+		</div>
+		</div>
+		<div class="form-group">
+		<div class="col-sm-3">
+			<p>Permission to Photograph Child (Yes / No)</p>
+			<input type="text" placeholder="Permission" name="registerPermission">
+		</div>
+		</div>
+		<input type="submit" value="Register">
+	</form>
+</template>

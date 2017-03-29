@@ -1,0 +1,10 @@
+<template name ="userPage">
+	{{> navbar}}
+	{{> yield}}
+</template>
+
+<template name="singleUserPage">
+	<h2>Your email address: {{currentUser.emails.[0].address}}</h2>
+	<br>
+	<p>Your school: {{currentUser.profile.school}}</p>
+</template>
