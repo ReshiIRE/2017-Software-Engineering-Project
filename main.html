@@ -1,4 +1,122 @@
 <head>
+  <title>Photogallery</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  </head>
+<body>
+
+<div class="container">
+  <br>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators" id = "javascript2">
+      
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox" id="javascript">
+	
+	
+	    
+
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+<script type="text/javascript">
+
+var bCheckEnabled = true;
+var bFinishCheck = false;
+
+
+var divArray = new Array();
+var listArray = new Array();
+var src = document.getElementById('javascript');
+var src2 = document.getElementById('javascript2');
+
+var imgArray = new Array();
+
+
+var i = 1;
+
+var myInterval = setInterval(loadImage, 1);
+
+
+function loadImage() {
+
+    if (bFinishCheck) {
+	
+	
+        clearInterval(myInterval);
+     
+	
+        return;
+    }
+
+    if (bCheckEnabled) {
+
+        bCheckEnabled = false;
+
+        divArray[i] = document.createElement('div');
+	listArray[i] = document.createElement('li');
+	if(i==1){
+	divArray[i].className = "item active";
+ 	listArray[i].className = "active";
+	}else{
+	divArray[i].className = "item";
+	}
+	imgArray[i] = document.createElement("img");
+	
+	imgArray[i].src = "images/" + i + ".jpg";
+	
+	listArray[i].setAttribute("data-target","#myCarousel");
+	listArray[i].setAttribute("data-slide-to",(i-1));
+	
+	divArray[i].appendChild(imgArray[i]);
+	
+        imgArray[i].onload = fExists;
+        imgArray[i].onerror = fDoesntExist;
+        
+
+    }
+
+}
+
+function fExists() {
+	
+    src.appendChild(divArray[i]);
+    src2.appendChild(listArray[i]);	
+    i++;
+    bCheckEnabled = true;
+}
+
+function fDoesntExist() {
+
+    bFinishCheck = true;
+}
+
+
+
+	
+
+	</script>
+</body>
+
+=======
+<head>
   <title>School Website</title>
 <!--  <link rel="stylesheet" type="text/css" href='main.css' /> -->
   <style>
