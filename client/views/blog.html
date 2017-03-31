@@ -4,29 +4,38 @@
 </template>
 
 <template name="newBlog">
-	<h1> Make a New Blog Entry </h1>
-	{{> quickForm collection="Blogs" id="submitBlogForm" type="method" meteormethod="submitBlog"}}
+	<div class="well col-xs-8 col-xs-offset-2">
+		<h1> Make a New Blog Entry </h1>
+			{{> quickForm collection="Blogs" id="submitBlogForm" type="method" meteormethod="submitBlog"}}<!-- QuickForm makes it very easy to setup
+			simple forms like this blog-->
+	</div>
 </template>
 
 <template name="blogList">
+<div class="well col-xs-8 col-xs-offset-2">
 	{{#each blogs}}
 		<hr>
 			{{> blogItem}}
 		<hr>
 	{{/each}}
+</div>
 </template>
 
 <template name = "blogItem">
+<div class="well col-xs-8 col-xs-offset-2">
 	<h3>
 		{{#linkTo route='singleBlog'}}
 			{{title}}
 		{{/linkTo}}
 	</h3>
+</div>
 </template>
 
 <template name = "blogPage">
-	<h2>{{title}}</h2>
-	<p>{{text}}</p>
-	<p>by {{author}}</p>
-	{{> comments}}
+	<div class="well col-xs-8 col-xs-offset-2">
+		<h2>{{title}}</h2>
+		<p>{{text}}</p>
+		<p>by {{author}}</p>
+		{{> comments}}
+	</div>
 </template>

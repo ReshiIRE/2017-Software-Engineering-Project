@@ -1,4 +1,79 @@
 /* CSS declarations go here */
+	    .details {
+    padding-top: 5px;
+    padding-bottom:5px;
+   
+    }  
+	 
+	 .navbar-brand {
+    padding-right: 50px !important;
+    }  
+
+	.container {
+	text-align: center;
+	padding: 5px;
+	margin-bottom: 20px !important;
+	}
+	
+	#center {
+		vertical-align: middle;
+		margin-top: 10px;
+		margin-bottom: none;
+	}
+
+	.nuig {
+	position: relative;
+	vertical-align: middle;
+	}
+	.map	{
+	position: center;
+	align-content: center;
+	}
+
+	.love-science {
+	height: 329px;
+	width: 658px;
+	left: 50%;
+	top: 71%;
+	}
+	
+	.science-symbol {
+	
+	height: 280px;
+	width: 350px;
+	margin: 10px;
+	top: 83%;
+	}
+			
+
+	.register {
+	position: absolute;
+	left: 48%;
+	padding-top: 8px;
+	width: 90px;
+	}
+
+	.all-text {
+	color:white;
+	}
+	
+	.register{
+	position: center;
+	width: 350px;
+	height: 350px;
+    left: 40%;
+	}
+
+.carousel-inner img {
+
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 70%;
+    max-width: 70%;
+    max-height: 500px;
+    min-height: 500px;
+
+}
 
 .show-grid [class^="col-"]
 {
@@ -8,14 +83,23 @@
 	padding-top: 10px;
 }
 
-div.container {
+/*div.container {
     width: 100%;
     border: 10px solid gray;
 }
+div.all-text{
+	font-family: "Arial Black";
+	text-align: left;
+	margin: 15px;
+	font-size:1.5em;
+}*/
 body {
-        font-family: "Times New Roman";
+    font-family: "Times New Roman";
+    background-image: url("/images/Repetable.jpg");
+    background-position: center;
+ 
 }
-
+/*
 header{
     padding: 1em;
     color: white;
@@ -51,7 +135,7 @@ article {
     border-left: 1px solid gray;
     padding: 30px;
     overflow: hidden;
-}
+}*/
 .jumbotron
 {
 	padding-top: 5px;
@@ -61,12 +145,12 @@ article {
 {
 	text-align: center;
 }
-
+/*
 #pad{
 	padding-left: 3em;
 	padding-right: 3em;
 }
-
+*/
 .editBox label:before
 {
     content: "\f040";
@@ -80,4 +164,57 @@ article {
     content: "Save";
     color:#333;
     cursor:pointer; cursor:hand;
+}
+
+.fc-event-container {
+  padding: 5px !important;
+}
+
+.fc-event {
+  padding: 5px 10px;
+  border-color: #ddd;
+  background: #fff !important;
+}
+  .fc-content {
+    color: #444;
+  }
+
+  h4,
+  h5 {
+    margin: 0;
+    font-weight: normal;
+  }
+
+  h4 {
+    color: #666;
+    font-size: 13px;
+    line-height: 18px;
+    white-space: normal;
+  }
+
+  h5 {
+    color: #888;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+
+  .guest-count {
+    margin: 5px 0;
+  }
+
+  p[class^="type-"] {
+    margin: 0;
+  }
+
+  p[class="type-Corporate"] {
+    color: red;
+  }
+
+  p[class="type-Wedding"] {
+    color: green;
+  }
+
+  p[class="type-Birthday"] {
+    color: blue;
+  }
 }
