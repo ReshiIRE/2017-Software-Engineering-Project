@@ -4,7 +4,9 @@
 </template>
 
 <template name="singleUserPage">
-	<h2>Your email address: {{currentUser.emails.[0].address}}</h2>
-	<br>
-	<p>Your school: {{currentUser.profile.school}}</p>
+	<div class="well col-xs-8 col-xs-offset-2">
+		<h2>Your email address: {{currentUser.emails.[0].address}}</h2>
+		<br>
+		<p>Your school: {{currentUser.profile.school}}</p>
+	</div>
 </template>

@@ -1,56 +1,52 @@
 <template name="navbar">
-<style>
-	.details {
-	padding-top: 5px;
-	padding-bottom:5px; 
-	
-	}	
-		
-	nav {
-	width: 100%;
-	}
-	.navbar-brand {
-	padding-right: 50px !important;
-	}	
-	
-	li {
-	padding: 2px 10px;
-	}
-	
-</style>
-	<nav class="navbar navbar-inverse">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-					<a class="navbar-brand">Summer School</a>
-			</div>
-			<div class="collapse navbar-collapse" id="myNavbar">
-				<ul class="nav navbar-nav">
-					<li><a href='/'>Home </a></li>
-					<li><a href='aboutUs'>About Us</a></li>
-					<li><a href='camp'>Camp Details</a></li>
-					<li><a href='contactUs'>Contact Us</a></li>
-					<li><a href='registerNow'>Register Now</a></li>
-					<!--{{#unless currentUser}}<li><a href='Registration'>Registation</a></li>{{/unless}}-->
-					<li>{{#linkTo route='Blog'}}Blog{{/linkTo}}</li>		
-					<li><!--<button type = "button" class = "toggle" data-toggle="collapse" data-target="#myCollapse">
-						<span class="icon-bar"></span>
-						</button>
-					<div class="collapse" id="myCollapse">-->
-						{{#if currentUser}}
-							{{> dashboard}}
-						{{else}}
-							{{> login}}
-							<!--{{> loginButtons}}-->
-						{{/if}}
-					<!--	</div>-->
-					</li>
-				</ul>
-			</div>
-		</div>
-	</nav>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <style>
+        nav {
+        width: 100%;
+        }
+   
+        li {
+        padding: 2px 10px;
+        }
+    </style>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                    <a class="navbar-brand">Summer School</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href='/'>Home </a></li>
+                    <li><a href='aboutUs'>About Us</a></li>
+                    <li><a href='camp'>Camp Details</a></li>
+                    <li><a href='calendar'>Events</a></li>
+                    <li><a href='contactUs'>Contact Us</a></li>
+                    <li><a href='registerNow'>Register Now</a></li>
+                    <li><a href='imageGallery'>Image Gallery</a></li>
+                    <li>{{#linkTo route='Blog'}}Blog{{/linkTo}}</li>       
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Log in<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">                       
+                                {{#if currentUser}}
+                                    {{> dashboard}}
+                                {{else}}
+                                    {{> login}}
+                                {{/if}}
+                                </a>
+                            </li>     
+                        </ul>
+                    </li>  
+                </ul>
+            </div>
+        </div>
+    </nav>
 </template>

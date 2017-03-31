@@ -1,3 +1,6 @@
+// setting up the blog schema
+// this ist mostly self explainitory
+
 var blogFields = {
 	title: {
 		type: String,

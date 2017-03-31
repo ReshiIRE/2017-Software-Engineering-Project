@@ -10,6 +10,26 @@ Router.route('/User:_id',
 	controller: 'UserPageController'
 });
 
+Router.route('/imageGallery', function()
+{
+	this.render('navbar', {to: "navigation"});
+	this.render('imageGallery', {to: "top"});
+	this.layout('main');
+},
+{
+	name: "imageGallery"
+})
+
+Router.route('/calendar', function()
+{
+	this.render('navbar', {to: "navigation"});
+	this.render('calendar', {to: "top"});
+	this.layout('main');
+},
+{
+	name:"calendar"
+});
+
 Router.route('/', function(){
 	this.render('navbar', {to: "navigation"});
 	this.render('home', {to: "top"});
